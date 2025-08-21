@@ -54,7 +54,7 @@ resource "aws_security_group" "ec2_sg" {
 resource "aws_instance" "my_ec2" {
   ami                    = data.aws_ami.ubuntu_2204.id
   instance_type          = "t2.micro"
-  key_name               = var.Vams
+  key_name               = var.Vamsi
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   associate_public_ip_address = true
 
